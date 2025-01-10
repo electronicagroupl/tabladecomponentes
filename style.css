@@ -2,74 +2,70 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(270deg, #ff0000, #000000);
-    background-size: 400% 400%; /* Aumenta el tamaño del gradiente para animación */
-    color: #fff;  /* Texto blanco */
+    background-size: 400% 400%; 
+    color: #fff;  
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;  /* Centra todo el contenido horizontalmente */
-    align-items: center;      /* Centra todo el contenido verticalmente */
-    height: 100vh;  /* Asegura que la altura ocupe toda la ventana */
-    flex-direction: column;  /* Asegura que los elementos estén en una columna */
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh; 
+    flex-direction: column;  
     transition: background-color 0.3s ease;
-    animation: gradient-animation 7s ease infinite; /* Aplica la animación */
+    animation: gradient-animation 7s ease infinite; 
 }
 
 h1 {
     text-align: center;
-    color: #ff0000;  /* Color rojo similar a YouTube */
+    color: #ff0000; 
     font-size: 2rem;
-    margin-bottom: 20px;  /* Espacio debajo del título */
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4444, 0 0 30px #ff6666; /* Efecto neón */
-    animation: neonPulse 1s infinite alternate; /* Pulso neón */
+    margin-bottom: 20px;  
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4444, 0 0 30px #ff6666; 
+    animation: neonPulse 1s infinite alternate; 
 }
 
-/* Contenedor para la tabla */
 .table-container {
     width: 100%;
-    max-width: 1200px; /* Establece un ancho máximo para la tabla */
-    margin: 0 auto;  /* Centra el contenedor */
+    max-width: 1200px; 
+    margin: 0 auto;  
     padding: 10px;
-    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    overflow-x: auto; 
 }
 
-/* Estilos generales de la tabla */
 .responsive-table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;  /* Utilizamos table-layout fijo para evitar que se desborde */
+    table-layout: fixed;  
     animation: tableFadeIn 1s ease-in-out;
 }
 
 .responsive-table th, .responsive-table td {
     padding: 12px;
     text-align: left;
-    border: 1px solid #ff0000;  /* Borde blanco para mayor contraste */
+    border: 1px solid #ff0000;  
     word-wrap: break-word;
     font-size: 1rem;
 }
 
-/* Colores de la tabla */
 .responsive-table th {
-    background-color: #ff0000; /* Fondo rojo para los encabezados */
+    background-color: #ff0000; 
     color: white;
     font-weight: bold;
-    text-shadow: 0 0 5px #ff4444, 0 0 10px #ff6666; /* Efecto neón en los encabezados */
+    text-shadow: 0 0 5px #ff4444, 0 0 10px #ff6666; 
 }
 
 .responsive-table td {
-    color: #fff; /* Texto blanco */
+    color: #fff; 
     
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Efecto hover en las filas */
 .responsive-table tr:hover td {
-    background-color: rgba(255, 0, 0, 0.7); /* Fondo rojo semi-transparente */
-    transform: scale(1.02); /* Ligero zoom en hover */
+    background-color: rgba(255, 0, 0, 0.7); 
+    transform: scale(1.02); 
 }
 
-/* Efectos de animación */
+
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
@@ -111,46 +107,42 @@ h1 {
     }
 }
 
-/* Hacer que las imágenes sean responsivas */
+
 .responsive-img {
-    max-width: 60px;  /* Limitar el tamaño de las imágenes */
+    max-width: 60px;  
     height: auto;
     border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Animación para las imágenes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
 }
 
 .responsive-img:hover {
-    transform: scale(1.1);  /* Efecto de zoom en las imágenes */
-    box-shadow: 0 0 15px #ff0000; /* Efecto neón al pasar el mouse */
+    transform: scale(1.1);  
+    box-shadow: 0 0 15px #ff0000; 
 }
 
-/* Estilos para pantallas pequeñas */
+
 @media screen and (max-width: 768px) {
-    /* Asegura que la tabla se desplace si es necesario */
     .table-container {
         overflow-x: auto;
     }
 
-    /* Estilo para las celdas y los encabezados en pantallas pequeñas */
     .responsive-table th, .responsive-table td {
-        display: table-cell;  /* Usamos table-cell para mantener la estructura de la tabla */
-        width: auto; /* El ancho se ajustará automáticamente */
+        display: table-cell;  
+        width: auto; 
         border: 1px solid #444;
         padding-left: 10px;
         padding-right: 10px;
     }
-
-    /* Hacer que las imágenes se ajusten mejor en pantallas pequeñas */
+    
     .responsive-img {
         max-width: 50px;
     }
 
-    /* Ajustar el tamaño de la fuente y los bordes para que no sea tan grande */
     .responsive-table td {
-        font-size: 0.9rem;  /* Reducir el tamaño del texto */
+        font-size: 0.9rem;  
     }
 
     .responsive-table th {
-        font-size: 1rem;  /* Reducir el tamaño del texto en los encabezados */
+        font-size: 1rem;  
     }
 }
