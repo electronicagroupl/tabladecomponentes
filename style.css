@@ -1,41 +1,75 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background: linear-gradient(270deg, #ff0000, #000000);
-    background-size: 400% 400%;
-    animation: gradient-animation 10s ease infinite;
-    color: white;
+    background-size: 400% 400%; /* Aumenta el tamaño del gradiente para animación */
+    color: #fff;  /* Texto blanco */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Centra todo el contenido horizontalmente */
+    align-items: center;      /* Centra todo el contenido verticalmente */
+    height: 100vh;  /* Asegura que la altura ocupe toda la ventana */
+    flex-direction: column;  /* Asegura que los elementos estén en una columna */
+    transition: background-color 0.3s ease;
+    animation: gradient-animation 7s ease infinite; /* Aplica la animación */
+}
+
+h1 {
     text-align: center;
-    padding: 20px;
+    color: #ff0000;  /* Color rojo similar a YouTube */
+    font-size: 2rem;
+    margin-bottom: 20px;  /* Espacio debajo del título */
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4444, 0 0 30px #ff6666; /* Efecto neón */
+    animation: neonPulse 1s infinite alternate; /* Pulso neón */
 }
 
-table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #FF0000;
-}
-
-th, td {
+/* Contenedor para la tabla */
+.table-container {
+    width: 100%;
+    max-width: 1200px; /* Establece un ancho máximo para la tabla */
+    margin: 0 auto;  /* Centra el contenedor */
     padding: 10px;
-    text-align: center;
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
 }
 
-th {
-    background-color: #FF0000;
+/* Estilos generales de la tabla */
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;  /* Utilizamos table-layout fijo para evitar que se desborde */
+    animation: tableFadeIn 1s ease-in-out;
+}
+
+.responsive-table th, .responsive-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ff0000;  /* Borde blanco para mayor contraste */
+    word-wrap: break-word;
+    font-size: 1rem;
+}
+
+/* Colores de la tabla */
+.responsive-table th {
+    background-color: #ff0000; /* Fondo rojo para los encabezados */
     color: white;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ff4444, 0 0 10px #ff6666; /* Efecto neón en los encabezados */
 }
 
-td img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
+.responsive-table td {
+    color: #fff; /* Texto blanco */
+    
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-/* Animaciones */
+
+/* Efecto hover en las filas */
+.responsive-table tr:hover td {
+    background-color: rgba(255, 0, 0, 0.7); /* Fondo rojo semi-transparente */
+    transform: scale(1.02); /* Ligero zoom en hover */
+}
+
+/* Efectos de animación */
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
@@ -49,67 +83,74 @@ td img {
 }
 
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
     }
-    to {
+    100% {
         opacity: 1;
     }
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-    table {
-        width: 90%;
+@keyframes tableFadeIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
     }
-    td img {
-        width: 80px;
-        height: 80px;
-    }
-}
-
-@media (max-width: 768px) {
-    table {
-        width: 95%;
-    }
-
-    td img {
-        width: 60px;
-        height: 60px;
-    }
-
-    th, td {
-        padding: 8px;
-    }
-
-    table, th, td {
-        display: block;
-        width: 100%;
-    }
-
-    td {
-        margin-bottom: 15px;
-    }
-
-    th {
-        display: none;
-    }
-
-    td:before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: block;
-        margin-bottom: 5px;
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
-@media (max-width: 480px) {
-    td img {
-        width: 50px;
-        height: 50px;
+@keyframes neonPulse {
+    0% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4444, 0 0 30px #ff6666;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff0000, 0 0 30px #ff4444, 0 0 40px #ff6666;
+    }
+}
+
+/* Hacer que las imágenes sean responsivas */
+.responsive-img {
+    max-width: 60px;  /* Limitar el tamaño de las imágenes */
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Animación para las imágenes */
+}
+
+.responsive-img:hover {
+    transform: scale(1.1);  /* Efecto de zoom en las imágenes */
+    box-shadow: 0 0 15px #ff0000; /* Efecto neón al pasar el mouse */
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    /* Asegura que la tabla se desplace si es necesario */
+    .table-container {
+        overflow-x: auto;
     }
 
-    body {
-        padding: 10px;
+    /* Estilo para las celdas y los encabezados en pantallas pequeñas */
+    .responsive-table th, .responsive-table td {
+        display: table-cell;  /* Usamos table-cell para mantener la estructura de la tabla */
+        width: auto; /* El ancho se ajustará automáticamente */
+        border: 1px solid #444;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Hacer que las imágenes se ajusten mejor en pantallas pequeñas */
+    .responsive-img {
+        max-width: 50px;
+    }
+
+    /* Ajustar el tamaño de la fuente y los bordes para que no sea tan grande */
+    .responsive-table td {
+        font-size: 0.9rem;  /* Reducir el tamaño del texto */
+    }
+
+    .responsive-table th {
+        font-size: 1rem;  /* Reducir el tamaño del texto en los encabezados */
     }
 }
