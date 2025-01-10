@@ -10,127 +10,130 @@
 
     <h1>Tabla de Componentes Electrónicos</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Imagen</th>
-                <th>Componente</th>
-                <th>Descripción</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><img src="Resistencia2.png" alt="Resistor"></td>
-                <td>Resistor</td>
-                <td>Limita el flujo de corriente en un circuito eléctrico.</td>
-            </tr>
-            <tr>
-                <td><img src="capacitor.png" alt="Capacitor"></td>
-                <td>Capacitor</td>
-                <td>Almacena energía eléctrica en un campo eléctrico.</td>
-            </tr>
-            <tr>
-                <td><img src="diodo.png" alt="Diodo"></td>
-                <td>Diodo</td>
-                <td>Permite el paso de corriente en una sola dirección.</td>
-            </tr>
-            <tr>
-                <td><img src="transistor.png" alt="Transistor"></td>
-                <td>Transistor</td>
-                <td>Amplifica señales eléctricas o actúa como interruptor.</td>
-            </tr>
-            <tr>
-                <td><img src="ledd.png" alt="LED"></td>
-                <td>LED</td>
-                <td>Diodo que emite luz cuando pasa corriente a través de él.</td>
-            </tr>
-            <tr>
-                <td><img src="potenciometro.png" alt="Potenciómetro"></td>
-                <td>Potenciómetro</td>
-                <td>Resistor variable utilizado para ajustar niveles de voltaje.</td>
-            </tr>
-            <tr>
-                <td><img src="buzzer.png" alt="Buzzer"></td>
-                <td>Buzzer</td>
-                <td>Emite sonido cuando pasa corriente a través de él.</td>
-            </tr>
-            <tr>
-                <td><img src="zener.png" alt="Diodo Zener"></td>
-                <td>Diodo Zener</td>
-                <td>Un tipo especial de diodo utilizado para regulación de voltaje.</td>
-            </tr>
-            <tr>
-                <td><img src="OIP.jpg" alt="Relevador"></td>
-                <td>Relevador</td>
-                <td>Interruptor controlado eléctricamente para manejar corrientes más altas.</td>
-            </tr>
-            <tr>
-                <td><img src="ldr.png" alt="LDR"></td>
-                <td>LDR</td>
-                <td>Resistor cuya resistencia varía con la intensidad de la luz.</td>
-            </tr>
-            <tr>
-                <td><img src="display.jpg" alt="Display 7 Segmentos"></td>
-                <td>Display 7 Segmentos</td>
-                <td>Display utilizado para mostrar números y algunos caracteres.</td>
-            </tr>
-            <tr>
-                <td><img src="compuerta.png" alt="Compuertas Lógicas"></td>
-                <td>Compuertas Lógicas</td>
-                <td>Componentes que realizan operaciones lógicas en circuitos digitales.</td>
-            </tr>
-            <tr>
-                <td><img src="74.png" alt="74LS90"></td>
-                <td>74LS90</td>
-                <td>Contador de 4 bits utilizado en circuitos digitales.</td>
-            </tr>
-            <tr>
-                <td><img src="74.png" alt="74LS47"></td>
-                <td>74LS47</td>
-                <td>Decodificador BCD a 7 segmentos utilizado en displays.</td>
-            </tr>
-            <tr>
-                <td><img src="push.jpg" alt="Push Botón"></td>
-                <td>Push Botón</td>
-                <td>Interruptor que se activa al presionar.</td>
-            </tr>
-            <tr>
-                <td><img src="circ.jpg" alt="Circuito Integrado"></td>
-                <td>Circuito Integrado</td>
-                <td>Componente que combina varios circuitos electrónicos en una sola pieza.</td>
-            </tr>
-            <tr>
-                <td><img src="ne555.png" alt="Cristal Oscilador"></td>
-                <td>Timer555</td>
-                <td>Genera pulsos y tiene varios modos.</td>
-            </tr>
-            <tr>
-                <td><img src="fus.jpg" alt="Fusible"></td>
-                <td>Fusible</td>
-                <td>Protege el circuito al interrumpir el flujo de corriente si se produce una sobrecarga.</td>
-            </tr>
-            <tr>
-                <td><img src="6000.jpg" alt="Motor Eléctrico"></td>
-                <td>Motor Eléctrico</td>
-                <td>Convierte energía eléctrica en energía mecánica.</td>
-            </tr>
-            <tr>
-                <td><img src="interruptor-de-3-vias-volteck-basic.jpg" alt="Interruptor"></td>
-                <td>Interruptor</td>
-                <td>Componente que abre o cierra un circuito eléctrico.</td>
-            </tr>
-            <tr>
-                <td><img src="osilos.png" alt="Osciloscopio"></td>
-                <td>Osciloscopio</td>
-                <td>Instrumento para medir señales eléctricas en un gráfico de tiempo.</td>
-            </tr>
-            <tr>
-                <td><img src="pppp.jpg" alt="Puente Rectificador"></td>
-                <td>Puente Rectificador</td>
-                <td>Circuito que convierte corriente alterna (CA) en corriente continua (CC).</td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Contenedor para la tabla, con la clase 'responsive-table' aplicada -->
+    <div class="table-container">
+        <table class="responsive-table">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Componente</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="Resistencia2.png" alt="Resistor" class="responsive-img"></td>
+                    <td>Resistor</td>
+                    <td>Limita el flujo de corriente en un circuito eléctrico.</td>
+                </tr>
+                <tr>
+                    <td><img src="capacitor.png" alt="Capacitor" class="responsive-img"></td>
+                    <td>Capacitor</td>
+                    <td>Almacena energía eléctrica en un campo eléctrico.</td>
+                </tr>
+                <tr>
+                    <td><img src="diodo.png" alt="Diodo" class="responsive-img"></td>
+                    <td>Diodo</td>
+                    <td>Permite el paso de corriente en una sola dirección.</td>
+                </tr>
+                <tr>
+                    <td><img src="transistor.png" alt="Transistor" class="responsive-img"></td>
+                    <td>Transistor</td>
+                    <td>Amplifica señales eléctricas o actúa como interruptor.</td>
+                </tr>
+                <tr>
+                    <td><img src="ledd.png" alt="LED" class="responsive-img"></td>
+                    <td>LED</td>
+                    <td>Diodo que emite luz cuando pasa corriente a través de él.</td>
+                </tr>
+                <tr>
+                    <td><img src="potenciometro.png" alt="Potenciómetro" class="responsive-img"></td>
+                    <td>Potenciómetro</td>
+                    <td>Resistor variable utilizado para ajustar niveles de voltaje.</td>
+                </tr>
+                <tr>
+                    <td><img src="buzzer.png" alt="Buzzer" class="responsive-img"></td>
+                    <td>Buzzer</td>
+                    <td>Emite sonido cuando pasa corriente a través de él.</td>
+                </tr>
+                <tr>
+                    <td><img src="zener.png" alt="Diodo Zener" class="responsive-img"></td>
+                    <td>Diodo Zener</td>
+                    <td>Un tipo especial de diodo utilizado para regulación de voltaje.</td>
+                </tr>
+                <tr>
+                    <td><img src="OIP.jpg" alt="Relevador" class="responsive-img"></td>
+                    <td>Relevador</td>
+                    <td>Interruptor controlado eléctricamente para manejar corrientes más altas.</td>
+                </tr>
+                <tr>
+                    <td><img src="ldr.png" alt="LDR" class="responsive-img"></td>
+                    <td>LDR</td>
+                    <td>Resistor cuya resistencia varía con la intensidad de la luz.</td>
+                </tr>
+                <tr>
+                    <td><img src="display.jpg" alt="Display 7 Segmentos" class="responsive-img"></td>
+                    <td>Display 7 Segmentos</td>
+                    <td>Display utilizado para mostrar números y algunos caracteres.</td>
+                </tr>
+                <tr>
+                    <td><img src="compuerta.png" alt="Compuertas Lógicas" class="responsive-img"></td>
+                    <td>Compuertas Lógicas</td>
+                    <td>Componentes que realizan operaciones lógicas en circuitos digitales.</td>
+                </tr>
+                <tr>
+                    <td><img src="74.png" alt="74LS90" class="responsive-img"></td>
+                    <td>74LS90</td>
+                    <td>Contador de 4 bits utilizado en circuitos digitales.</td>
+                </tr>
+                <tr>
+                    <td><img src="74.png" alt="74LS47" class="responsive-img"></td>
+                    <td>74LS47</td>
+                    <td>Decodificador BCD a 7 segmentos utilizado en displays.</td>
+                </tr>
+                <tr>
+                    <td><img src="push.jpg" alt="Push Botón" class="responsive-img"></td>
+                    <td>Push Botón</td>
+                    <td>Interruptor que se activa al presionar.</td>
+                </tr>
+                <tr>
+                    <td><img src="circ.jpg" alt="Circuito Integrado" class="responsive-img"></td>
+                    <td>Circuito Integrado</td>
+                    <td>Componente que combina varios circuitos electrónicos en una sola pieza.</td>
+                </tr>
+                <tr>
+                    <td><img src="ne555.png" alt="Cristal Oscilador" class="responsive-img"></td>
+                    <td>Timer555</td>
+                    <td>Genera pulsos y tiene varios modos.</td>
+                </tr>
+                <tr>
+                    <td><img src="fus.jpg" alt="Fusible" class="responsive-img"></td>
+                    <td>Fusible</td>
+                    <td>Protege el circuito al interrumpir el flujo de corriente si se produce una sobrecarga.</td>
+                </tr>
+                <tr>
+                    <td><img src="6000.jpg" alt="Motor Eléctrico" class="responsive-img"></td>
+                    <td>Motor Eléctrico</td>
+                    <td>Convierte energía eléctrica en energía mecánica.</td>
+                </tr>
+                <tr>
+                    <td><img src="interruptor-de-3-vias-volteck-basic.jpg" alt="Interruptor" class="responsive-img"></td>
+                    <td>Interruptor</td>
+                    <td>Componente que abre o cierra un circuito eléctrico.</td>
+                </tr>
+                <tr>
+                    <td><img src="osilos.png" alt="Osciloscopio" class="responsive-img"></td>
+                    <td>Osciloscopio</td>
+                    <td>Instrumento para medir señales eléctricas en un gráfico de tiempo.</td>
+                </tr>
+                <tr>
+                    <td><img src="pppp.jpg" alt="Puente Rectificador" class="responsive-img"></td>
+                    <td>Puente Rectificador</td>
+                    <td>Circuito que convierte corriente alterna (CA) en corriente continua (CC).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 </html>
