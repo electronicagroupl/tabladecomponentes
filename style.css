@@ -1,8 +1,7 @@
-/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(270deg, #ff0000, #000000);
-    background-size: 400% 400%; 
+    background-size: 400% 400%;
     color: #fff;  
     margin: 0;
     padding: 0;
@@ -12,16 +11,16 @@ body {
     height: 100vh; 
     flex-direction: column;  
     transition: background-color 0.3s ease;
-    animation: gradient-animation 7s ease infinite; 
+    animation: gradient-animation 7s ease infinite, text-color-animation 7s ease infinite;
 }
 
 h1 {
     text-align: center;
-    color: #ff0000; 
+    color: #ff0000;
     font-size: 2rem;
     margin-bottom: 20px;  
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4444, 0 0 30px #ff6666; 
-    animation: neonPulse 1s infinite alternate; 
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4444, 0 0 30px #ff6666;
+    animation: neonPulse 1s infinite alternate, text-color-animation 7s ease infinite;
 }
 
 .table-container {
@@ -45,10 +44,10 @@ h1 {
     border: 1px solid #ff0000;  
     word-wrap: break-word;
     font-size: 1rem;
+    animation: text-color-animation 7s ease infinite; 
 }
 
 .responsive-table th {
-    background-color: #ff0000; 
     color: white;
     font-weight: bold;
     text-shadow: 0 0 5px #ff4444, 0 0 10px #ff6666; 
@@ -56,7 +55,6 @@ h1 {
 
 .responsive-table td {
     color: #fff; 
-    
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -64,7 +62,6 @@ h1 {
     background-color: rgba(255, 0, 0, 0.7); 
     transform: scale(1.02); 
 }
-
 
 @keyframes gradient-animation {
     0% {
@@ -75,6 +72,18 @@ h1 {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes text-color-animation {
+    0% {
+        color: #FF0000; 
+    }
+    50% {
+        color: #FFFFFF; 
+    }
+    100% {
+        color: #FF0000; 
     }
 }
 
@@ -107,7 +116,6 @@ h1 {
     }
 }
 
-
 .responsive-img {
     max-width: 60px;  
     height: auto;
@@ -119,7 +127,6 @@ h1 {
     transform: scale(1.1);  
     box-shadow: 0 0 15px #ff0000; 
 }
-
 
 @media screen and (max-width: 768px) {
     .table-container {
